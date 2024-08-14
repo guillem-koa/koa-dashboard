@@ -30,7 +30,7 @@ ChartJS.register(
       ]}); // Initialize chartdata with empty data
 
       const [range, setRange] = useState('30');
-      const [id_maquina, setIDMaquina] = useState('1');
+      const [id_maquina, setIDMaquina] = useState('489');
   
     useEffect(() => {
       // Replace 'API_URL' with the actual API endpoint
@@ -80,9 +80,9 @@ ChartJS.register(
         <select onChange={(e)=>{
           setIDMaquina(e.target.value);
         }}> 
-          <option value='1'> Machine 1 </option>
-          <option value='2'> Machine 2 </option>
-          <option value='3'> Machine 3 </option>
+          <option value='489'> Machine 1 </option>
+          <option value='490'> Machine 2 </option>
+          <option value='506'> Machine 3 </option>
         </select>
         <Line data={chartData} options={options} />
       </div>

@@ -28,29 +28,29 @@ ChartJS.register(
       ]}); // Initialize chartdata with empty data
 
       const [range, setRange] = useState('30');
-      const [id_maquina, setIDMaquina] = useState('1');
+      const [id_maquina, setIDMaquina] = useState('AA-202310-001');
   
     useEffect(() => {
       // Replace 'API_URL' with the actual API endpoint
       async function fetchData() {
-        const response = await fetch('http://37.187.176.243:8001/get_machine_predictions?id_maquina='+id_maquina+'&range='+range);
+        const response = await fetch('http://37.187.176.243:8001/get_machine_predictions?serial_num='+id_maquina+'&range='+range);
         const resData = await response.json();
         const resChartData = {
           labels: resData.map((item,index) => item.TIME_STAMP),
           datasets: [
             {
               label: 'Aeromonas',
-              data: resData.map(item => JSON.parse(item.PRED_BA).assalmonicida),
-              borderColor: 'rgba(75, 192, 192, 1)',
+              data: resData.map(item => JSON.parse(item.PRED_BA).asalmonicida),
+              borderColor: 'rgba(27, 156, 247, 0.8)',
             },
             {
               label: 'Photobactereum',
               data: resData.map(item => JSON.parse(item.PRED_BA).pddamselae),
-              borderColor: 'rgba(75, 100, 23, 1)',
+              borderColor: 'rgba(28, 227, 255, 0.76)',
             },
             {
-              label: 'Streptococcus',
-              data: resData.map(item => JSON.parse(item.PRED_BA).sinniae),
+              label: 'Staphyloccocus',
+              data: resData.map(item => JSON.parse(item.PRED_BA)['staphylo-']),
               borderColor: 'rgba(75, 192, 192, 1)',
             }
           ]}
@@ -88,9 +88,9 @@ ChartJS.register(
         <select onChange={(e)=>{
           setIDMaquina(e.target.value);
         }}> 
-          <option value='1'> Machine 1 </option>
-          <option value='2'> Machine 2 </option>
-          <option value='3'> Machine 3 </option>
+          <option value='AA-202310-001'> Machine 1 </option>
+          <option value='AA-202310-002'> Machine 2 </option>
+          <option value='AA-202310-003'> Machine 3 </option>
         </select>
 
         <Line data={chartData} options={options} />
