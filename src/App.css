@@ -45,3 +45,150 @@
 .e-input-group:not(.e-float-icon-left), .e-input-group.e-success:not(.e-float-icon-left), .e-input-group.e-warning:not(.e-float-icon-left), .e-input-group.e-error:not(.e-float-icon-left), .e-input-group.e-control-wrapper:not(.e-float-icon-left), .e-input-group.e-control-wrapper.e-success:not(.e-float-icon-left), .e-input-group.e-control-wrapper.e-warning:not(.e-float-icon-left), .e-input-group.e-control-wrapper.e-error:not(.e-float-icon-left){
   border: none;
 }
+
+
+
+
+/* App.css */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+h2 {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 1.3rem; 
+}
+/* Make the table horizontally scrollable */
+.table-container {
+  overflow-x: auto;
+  max-width: 80%;
+  padding: 20px; /* Adjust the padding value as needed */
+}
+
+table {
+  width: 90%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 20px auto; /* Center the table and add margins */
+  text-align: center; /* Center align text in cells */
+
+}
+
+/* Reduce the font size for table header (th) and table data (td) */
+th, td {
+  font-size: 12px; /* Adjust the font size as needed */
+  padding: 8px; /* Add padding to table cells */
+  border: 1px solid #ccc;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.container {
+  background-color: transparent; /* Make the container background transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%; /* Set the width to 80% of the viewport width */
+  margin: 30px; /* Add margin bottom between containers */
+}
+
+.content {
+  background-color: #ffffff; /* Pure white */
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 30px; /* Rounded corners */
+  padding: 30px; /* Add padding if needed */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  width: 90%; /* Allow the content div to stretch horizontally */
+}
+
+.checkbox-container {
+  display: flex;
+  background-color: #f2f2f2;
+  border-radius: 30px;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+  padding: 7px; /* Adjust the padding value as needed */
+  margin: 42px
+
+}
+
+.checkbox-label {
+  margin: 10px;
+  font-size: 12px; /* Adjust this value as needed */
+}
+
+.btn {
+  background-color: #73c2de; /* Green background */
+  border: none; /* Remove default border */
+  color: white; /* White text */
+  padding: 8px 16px; /* Add padding */
+  text-align: center; /* Center align text */
+  text-decoration: none; /* Remove default underline */
+  display: inline-block; /* Make it inline-block to adjust padding and margin */
+  font-size: 14px; /* Adjust font size */
+  margin: 4px; /* Add margin */
+  cursor: pointer; /* Show pointer cursor on hover */
+  border-radius: 18px; /* Rounded corners */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+.btn:hover {
+  background-color: #5a97ad; /* Darker green background on hover */
+}
+
+
+.header, .footer {
+  border-radius: 30px; /* Rounded corners */
+  padding: 30px; /* Add padding if needed */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  width: 70%; /* Allow the content div to stretch horizontally */
+  background-color: #5a97ad;
+  color: #f5f5f5;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header h1 {
+  margin-left: 20px;
+}
+
+.header .subtitle {
+  color: white;
+  font-size: 1em;
+  font-weight: 300;
+  margin-left: 20px;
+
+}
+
+.header .logo {
+  height: 50px;
+}
+
+.footer .logo {
+  height: 50px;
+}
+
+.footer {
+  text-align: center;
+}
