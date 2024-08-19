@@ -1,4 +1,3 @@
-import { RgbColor } from '@syncfusion/ej2/heatmap';
 import React, { useState } from 'react';
 
 const Sequencing = () => {
@@ -33,7 +32,7 @@ const Sequencing = () => {
 
   const renderTable = () => {
     if (!dataframe) return null;
-  
+
     const headers = Object.keys(dataframe);
     const rows = Object.keys(dataframe[headers[0]]).map((index) => {
       return (
@@ -44,7 +43,7 @@ const Sequencing = () => {
         </tr>
       );
     });
-  
+
     return (
       <div style={{ marginTop: '30px' }}>
         <h2>  Results 🧪 </h2>
@@ -67,57 +66,57 @@ const Sequencing = () => {
       <div className="content">
         <h2>Lab Sequencing Data 🧬</h2>
 
-        <div class="info-box" style={{marginLeft: '50px'}}>
-            <p>
-                Enter the <strong> Google Drive Folder ID </strong> of a folder containing sequencing results which must be 'ab1' format. <br /> 
-                The app generates a <strong> spreadsheet </strong> with BLAST sequencing results showing most accurate matchings. <br /> 
-                <strong> Important☝️</strong> The folder must have accessibility status <em>Everyone with the link</em> can be <em>Editor</em>. 
-            </p>
-            </div>
+        <div class="info-box" style={{ marginLeft: '50px' }}>
+          <p>
+            Enter the <strong> Google Drive Folder ID </strong> of a folder containing sequencing results which must be 'ab1' format. <br />
+            The app generates a <strong> spreadsheet </strong> with BLAST sequencing results showing most accurate matchings. <br />
+            <strong> Important☝️</strong> The folder must have accessibility status <em>Everyone with the link</em> can be <em>Editor</em>.
+          </p>
+        </div>
 
         <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', marginLeft: '50px' }}>
           <label style={{ fontWeight: 'bold', marginRight: '30px' }}>Folder ID</label>
-          <input 
+          <input
             type="text"
             placeholder="Enter folder ID"
             value={folderId}
             onChange={handleInputChange}
             style={{
-                padding: '10px', // Increase padding for larger input box
-                fontSize: '16px', // Larger text
-                width: '350px', // Increase width
-              }}
+              padding: '10px', // Increase padding for larger input box
+              fontSize: '16px', // Larger text
+              width: '350px', // Increase width
+            }}
           />
 
-        <div style={{ display: 'flex', alignItems: 'center', marginLeft: '20px' }}>
-          {loading ? (
-            <img 
-              src="https://i.gifer.com/ZKZg.gif" 
-              alt="Loading..." 
-              style={{ width: '20px' }} // Adjust the size of the GIF as needed
-            />
-          ) : (
-            <button className="btn" style={{marginLeft: '0px' }} onClick={handleSubmit}>Submit</button>
-          )}
+          <div style={{ display: 'flex', alignItems: 'center', marginLeft: '20px' }}>
+            {loading ? (
+              <img
+                src="https://i.gifer.com/ZKZg.gif"
+                alt="Loading..."
+                style={{ width: '20px' }} // Adjust the size of the GIF as needed
+              />
+            ) : (
+              <button className="btn" style={{ marginLeft: '0px' }} onClick={handleSubmit}>Submit</button>
+            )}
           </div>
 
 
-        {error && <p style={{ color: 'red' }}>{error}</p>}
+          {error && <p style={{ color: 'red' }}>{error}</p>}
         </div>
 
         {renderTable()}
 
         {fileId && (
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '20px' }}>
-    
-    <button className="btn" onClick={() => window.open(`https://drive.google.com/drive/folders/${folderId}`, '_blank')} style={{ margin : '20px' }}> Go to Folder  </button>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '20px' }}>
+
+            <button className="btn" onClick={() => window.open(`https://drive.google.com/drive/folders/${folderId}`, '_blank')} style={{ margin: '20px' }}> Go to Folder  </button>
 
 
-  <button className="btn" onClick={() => window.open(`https://docs.google.com/spreadsheets/d/${fileId}`, '_blank')} style={{ margin : '20px' }}>
-    Go to Spreadsheet
-  </button>
+            <button className="btn" onClick={() => window.open(`https://docs.google.com/spreadsheets/d/${fileId}`, '_blank')} style={{ margin: '20px' }}>
+              Go to Spreadsheet
+            </button>
 
-</div>
+          </div>
         )}
       </div>
     </div>

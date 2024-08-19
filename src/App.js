@@ -69,10 +69,10 @@ const App = () => {
                 {/* charts  */}
                 <Route path="/pathogens" element={(<PathogenLine />)} />
                 <Route path="/machines" element={(<Line />)} />
-                <Route path="/orders" element = {<Orders />} />
-                <Route path="/reporting" element = {<Reporting />} />
-                <Route path="/colonycounting" element = {<ColonyCounting />} />
-                <Route path="/sequencing" element = {<Sequencing />} />
+                <Route path="/orders" element={<Orders />} />
+                <Route path="/reporting" element={<Reporting />} />
+                <Route path="/colonycounting" element={<ColonyCounting />} />
+                <Route path="/sequencing" element={<Sequencing />} />
 
               </Routes>
             </div>
