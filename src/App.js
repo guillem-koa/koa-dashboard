@@ -64,9 +64,7 @@ const App = () => {
               {themeSettings && (<ThemeSettings />)}
 
               <Routes>
-                {/* dashboard  */}
                 <Route path="/" element={(<Reporting />)} />
-                {/* charts  */}
                 <Route path="/pathogens" element={(<PathogenLine />)} />
                 <Route path="/machines" element={(<Line />)} />
                 <Route path="/orders" element={<Orders />} />
