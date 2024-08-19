@@ -1,7 +1,7 @@
 import React from 'react';
 import { AiOutlineCalendar, AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
 import { FiShoppingBag, FiEdit, FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart, FiMonitor } from 'react-icons/fi';
-import { FaDna } from 'react-icons/fa';
+import { FaDna, FaBacteria } from 'react-icons/fa';
 import { BsKanban, BsBarChart, BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft } from 'react-icons/bs';
 import { BiColorFill } from 'react-icons/bi';
 import { IoMdContacts } from 'react-icons/io';
@@ -476,7 +476,7 @@ export const links = [
   {
     title: 'Dashboard',
     links: [
-      {
+/*      {
         name: 'pathogens',
         icon: <AiOutlineStock />,
       },
@@ -488,21 +488,25 @@ export const links = [
         name: 'orders',
         icon: <MdOutlineShoppingBag />,
       },
+  */
       {
         name: 'reporting',
         icon: <MdOutlineStackedBarChart />,
-      },
-      {
-        name: 'colonycounting',
-        icon: <MdScience />,
-      },
-      {
-        name: 'sequencing',
-        icon: <FaDna /> ,
       }
-      
     ],
   },
+  {
+    title: 'Lab funs',
+    links: [{
+      name: 'colonycounting',
+      icon: <FaBacteria />,
+    },
+    {
+      name: 'sequencing',
+      icon: <FaDna /> ,
+    }
+  ]
+  }
 ];
 
 export const cartData = [

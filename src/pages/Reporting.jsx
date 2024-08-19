@@ -107,8 +107,10 @@ function Reporting() {
           ))}
         </tbody>
       </table>
-      ) : (
+      ) : uniqueMachines && uniqueMachines.length === 0 ? (
         <p style={{ textAlign: 'center' }}>Everything is up to date! ✅ 🫡</p>
+      ) : (
+        <p style={{ textAlign: 'center' }}>Select some machine ⚙️ ⬆️</p>
       )}
     </div>
     </div>

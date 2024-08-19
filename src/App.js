@@ -65,7 +65,7 @@ const App = () => {
 
               <Routes>
                 {/* dashboard  */}
-                <Route path="/" element={(<Line />)} />
+                <Route path="/" element={(<Reporting />)} />
                 {/* charts  */}
                 <Route path="/pathogens" element={(<PathogenLine />)} />
                 <Route path="/machines" element={(<Line />)} />

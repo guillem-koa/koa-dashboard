@@ -46,15 +46,23 @@ const ColonyCounting = () => {
         <div class="container">
         <div class="content">
           <h2> Colony Counting on LB Agar 🧫</h2>
+          <div class="info-box" style={{marginLeft: '50px'}}>
+            <p>
+                Upload a <strong> picture of a single LB agar plate</strong>. The app outputs the same picture with boxes surrounding colonies.
+                On the top of the image you get the sum of all colonies.
+            </p>
+            </div>
+
           <form onSubmit={handleSubmit} style={{ marginLeft: '50px' }}>
                 <input type="file" accept="image/*" onChange={handleFileChange} />
-                <button class = "btn" type="submit" disabled={loading}>
+                <button class = "btn" type="submit" disabled={loading} style={{marginLeft: '100px'}}>
                     {loading ? 'Processing...' : 'Submit'}
                 </button>
             </form>
+
             {resultImage && (
                 <div>
-                    <h2>Result Image:</h2>
+                    <h2>Result Image 🔬</h2>
                     <img src={resultImage} alt="Processed result" style={{ maxWidth: '70%', height: 'auto', display: 'block', // Ensure the image is treated as a block element
                     margin: '0 auto', // Center the image horizontally 
                     }} />
